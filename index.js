@@ -7,7 +7,7 @@ function handleSubmitButton() {
 }
 
 function renderRepos(username) {
-    fetch(`http://api.github.com/users/${username}/repos`)
+    fetch(`https://api.github.com/users/${username}/repos`)
         .then(response => response.json())
         .then(responseJSON => {
             console.log(responseJSON);
@@ -15,7 +15,8 @@ function renderRepos(username) {
                 generateErrorMessage();
             } else {
                 generateRepos(responseJSON);
-            }})
+            }
+        })
         .catch(generateErrorMessage());
 }
 
