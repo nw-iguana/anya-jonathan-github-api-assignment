@@ -37,7 +37,7 @@ function generateRepos(responseJSON) {
         `);
     }
     results.join('');
-    $('.search-results').html(`<ul>${results}</ul>`);
+    $('.search-results').html(results);
 }
 
 function generateErrorMessage() {
